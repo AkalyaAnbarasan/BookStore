@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+  :root{
+    --green:#27ae60;
+    --dark-color:#219150;
+    --black:#444;
+    --light-color:#666;
+    --border:.1rem solid var(--black);
+    --box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    /* transition:width none; */
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:5rem ;
+    scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+
+html::-webkit-scrollbar-thumb{
+    background:var(--black);
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    border-radius: .5rem;
+    color:#fff;
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor:pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    background: var(--dark-color);
+}
+.Registration-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .9);
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    /* Add other common styling properties here */
+}
+
+/*for closing login button*/
+.Registration-form-container.active{
+    right:0;
+}
+.Registration-form-container form{
+    font-size: 62.5%;
+    background:#fff;
+    border:var(--border);
+    width:40rem;
+    padding:2rem;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;/*for the curve around border*/
+    margin:2rem;
+}
+
+.Registration-form-container form h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+    text-align: center;
+}
+
+.Registration-form-container form span{
+    display:block;
+    font-size:1.5rem;
+    padding-top:1rem;
+}
+
+.Registration-form-container form .box{
+    width:100%;
+    margin:.7rem 0;
+    font-size: 1.6rem;
+    border:var(--border);
+    border-radius: .5rem;
+    padding:1rem 1.2rem;
+    color:var(--black);
+    text-transform: none;
+}
+.Registration-form-container form .checkbox{
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    padding:1rem 0;
+}
+.Registration-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color:var(--light-color);
+    cursor:pointer;
+}
+.Registration-form-container form .btn{
+    text-align: center;
+    width:100%;
+    margin:1.5rem 0;
+    
+}
+.Registration-form-container form p{
+    padding-top:.8rem;
+    color:var(--light-color);
+    font-size:1.5rem;
+}
+.Registration-form-container form p a{
+    color:var(--green);
+    text-decoration: underline;
+}
+
+.Registration-form-container #close-login-btn{
+    position:absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 5rem;
+    color:var(--black);
+    cursor:pointer;
+}
+/* ----------- */
+
+ /* .Registration-form-container{
+    width: 100%;
+    /* display: none; */
+    /* background-color: #444; */
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}  */
+/* .registration-box{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}*/
+ .registration-box > form > div > input{
+    width: 400px;
+    height: 35px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}  
+.registration-box > form > div > #btn{
+    width: 400px;
+    background-color: var(--green);
+}
+.Registration-form-container form span{
+    display:block;
+    font-size:1.5rem;
+    padding-top:1rem;
+}
+.Registration-form-container form  a{
+    color:var(--green);
+    text-decoration: underline;
+}
+
+/* .group > span > a{
+    color: #fff;
+}   */
+    </style>
+</head>
+<body>
+    <div class="Registration-form-container" name="reg">
+        <div id="Registration-form-container" class="hidden-class">
+            <div class="registration-box">
+                <!-- <div id="close-login-btn" class="fas fa-times"></div> -->
+                <form action="" name="form-fill" method="get">   
+                    <h1>Register</h1>
+                    <span>UserName</span>
+                        <input type="text" name="username" class="box" placeholder="Enter your username" id="" >
+                        <span>Email</span>
+                        <input type="email" name="email" class="box" placeholder="Enter your email" id="">
+                        <span>Password</span>
+                    
+                        <input type="password" name="password" class="box" placeholder="Enter your password">
+                    
+                        <span>Confirm Password</span>
+                        <input type="password" name="cpassword" class="box" placeholder="Confirm your password">
+                    
+                    
+                        <input type="submit"  value="Register" class="btn">
+                    
+                    <div class="group">
+                        <span>Forgot password?<a href="#">click here</a></span>
+                        <!-- <span><a href="#">login</a></span> -->
+                        <span><a href="" id="back-to-login-link">Back to Login</a></span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+    // let form =document.querySelector("form");
+    // form.addEventListener("submit",e=>{
+    //     e.preventDefault();
+    //     window.location.assign("http://127.0.0.1:5500/BookStore%20Project/BookStore.html")
+    // })
+</script>
+</body>
+</html>

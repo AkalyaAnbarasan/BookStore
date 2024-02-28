@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--font link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- css file link -->
+    <title>Document</title>
+<style>
+    .Registration-form-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,255,255,.9);/*for the opacity rgba a-->opacity */
+    position:fixed;
+    top:0;
+    right:-105%;
+    z-index: 10000;
+    height:100%;
+    width:100%;
+}
+</style>
+</head>
+<body>
+    <!--navigation bar-->
+   
+    <div class="Registration-form-container">
+        <div class="registration-box">
+            <form action="" name="form-fill">
+                <h3>Register</h3>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="username">
+                </div>
+                <div class="input-box">
+                    <input type="email" name="Email" placeholder="email">
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="password">
+                </div>
+                <div class="input-box">
+                    <input type="password" name="cpassword" placeholder="confirm password">
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+                <div class="group">
+                    <span><a href="#">Forgot password?</a></span>
+                    <span><a href="#">login</a></span>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
